@@ -7,6 +7,16 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
+
+electron.crashReporter.start({
+  productName: 'MPStudio',
+  companyName: 'Motorized Precision',
+  submitURL: 'https://pacific-falls-32011.herokuapp.com/',
+  autoSubmit: true,
+  ignoreSystemCrashHandler: false,
+  extra: {'test': 'test'}
+});
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
